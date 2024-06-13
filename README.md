@@ -47,3 +47,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 # wormy
 An app for book worms to track the books they read and make notes on them.
+
+# Style Guide
+Using this for reference [Website](https://airbnb.io/javascript/react/) and [Github](https://github.com/airbnb/javascript/tree/master/react).

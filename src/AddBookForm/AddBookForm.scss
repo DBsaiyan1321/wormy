@@ -1,0 +1,39 @@
+.add-book-form-container {
+  width: fit-content;
+  padding: 0 1rem;
+}
+
+.add-book-form-title {
+  font-family: Chalkduster, fantasy;
+  font-size: 36px;
+}
+
+.add-book-form-image {
+  width: 33%;
+  max-width: 500px;
+  min-width: 250px;
+}
+
+// TODO: This is probably going to be a set of styles that are repeated a lot.
+// Find a way to make it reusable.
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-label {
+  font-family: Luminary, fantasy;
+  font-size: 18px;
+}
+
+.input-field {
+  border: 1px solid blue;
+  border-right: none;
+  border-top: none;
+}
+
+.submit-button {
+  border-radius: 4px;
+  background-color: aqua;
+}
