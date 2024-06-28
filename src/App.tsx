@@ -35,11 +35,15 @@ const App =() => {
   // https://www.typescriptlang.org/docs/handbook/2/functions.html#specifying-type-arguments
   const [books, setBooks] = useState<Book[]>(TEST_DATA_BOOKS)
 
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   // TODO: Is this a good place to use a generic?
   // TODO: How do I write a test for this?
   const addBook = (book: Book) => {
     setBooks((previousState: Book[]): Book[] => [...previousState, book]);
   }
+
+  const closeModal = () => { setIsModalOpen(false) }
 
   const booksByGenre: BooksByGenre = organizeBooksByGenre(books);
   const genres: string[] = Object.keys(booksByGenre);
@@ -55,6 +59,7 @@ const App =() => {
 
       {genres.map((genre: string) => (<BookSection booksOfGenre={booksByGenre[genre]} genre={genre} />))}
 
+      {/* <AddBookForm addBook={addBook} closeModal={closeModal} isOpen={isModalOpen} /> */}
       <AddBookForm addBook={addBook} />
 
       {/* TODO: To properly do this, I would need the Redux store set up. Because I do

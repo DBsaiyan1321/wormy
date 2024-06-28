@@ -21,7 +21,7 @@ const router = createBrowserRouter(
     // loader={fetchBooks},
     <Route element={<App />} errorElement={<ErrorPage />} path="/">
       {/* TODO: This rout won't be necessary anymore, since it will be a modal in App */}
-      <Route element={<AddBookForm addBook={(value: Book) => { console.log(value) }} />} path="add-book" />
+      {/* <Route element={<AddBookForm addBook={(value: Book) => { console.log(value) }} />} path="add-book" /> */}
       <Route element={<Settings />} path="settings" />
       <Route element={<BookDetailsPage />} path="book/:bookId" />
 
