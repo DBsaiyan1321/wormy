@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
-import { categorizeBooks } from './AppUtils';
+import { organizeBooksByGenre } from './AppUtils';
 import { Book } from './commonTypes';
 
-describe("categorizeBooks", () => {
+describe("organizeBooksByGenre", () => {
   const books: Book[] = [
     { genre: "Fiction", id: "1", title: "Fiction Book 1" },
     { genre: "Fiction", id: "2", title: "Fiction Book 2" },
@@ -13,7 +13,7 @@ describe("categorizeBooks", () => {
   ]
 
   test("pass in books", () => {
-    expect(categorizeBooks(books)).toEqual({
+    expect(organizeBooksByGenre(books)).toEqual({
       "Fiction": [
         { genre: "Fiction", id: "1", title: "Fiction Book 1" },
         { genre: "Fiction", id: "2", title: "Fiction Book 2" }
@@ -26,6 +26,6 @@ describe("categorizeBooks", () => {
   })
 
   test("pass in an empty array", () => {
-    expect(categorizeBooks([])).toEqual({})
+    expect(organizeBooksByGenre([])).toEqual({})
   })
 });

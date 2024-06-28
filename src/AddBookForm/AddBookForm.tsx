@@ -28,12 +28,8 @@ const AddBookForm = ({ addBook }: { addBook: AddBook}) => {
 
   // https://www.typescriptlang.org/docs/handbook/2/functions.html#parameter-destructuring
   const onSubmit = (values: Book, { setSubmitting }: { setSubmitting: SetSubmitting }) => {
-    console.log(values)
-    // setTimeout(() => {
-    //   alert(JSON.stringify(values, null, 2));
-    //   setSubmitting(false);
-    // }, 400)
-    addBook(values)
+    addBook(values);
+    // TODO: I can use a Redirect to bring them to the detail page of this book.
   };
 
   // https://formik.org/docs/overview#reducing-boilerplate

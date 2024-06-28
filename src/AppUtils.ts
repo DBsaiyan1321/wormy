@@ -1,19 +1,19 @@
 import { Book } from "./commonTypes"
 
-interface CategorizedBooks { [key: string]: Book[] }
+export interface BooksByGenre { [key: string]: Book[] }
 
-export const categorizeBooks = (books: Book[]): CategorizedBooks => {
-  const categorizedBooks: CategorizedBooks = { };
+export const organizeBooksByGenre = (books: Book[]): BooksByGenre => {
+  const booksByGenre: BooksByGenre = { };
 
   for (const book of books) {
     const { genre } = book;
 
-    if (genre in categorizedBooks) {
-      categorizedBooks[genre].push(book);
+    if (genre in booksByGenre) {
+      booksByGenre[genre].push(book);
     } else {
-      categorizedBooks[genre] = [book];
+      booksByGenre[genre] = [book];
     }
   }
 
-  return categorizedBooks;
+  return booksByGenre;
 }
